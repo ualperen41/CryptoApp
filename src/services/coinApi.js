@@ -32,7 +32,7 @@ const coinApi = {
       },
     });
 
-    return res.data.prices.map(({ timestamp, price }) => ({
+    return res.data.prices.map(([timestamp, price]) => ({
       price,
       timestamp,
       date: new Date(timestamp).toISOString(),
